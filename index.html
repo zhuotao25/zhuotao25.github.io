@@ -75,6 +75,57 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Add-Navigation-Routing" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/25/Add-Navigation-Routing/" class="article-date">
+  <time datetime="2019-08-25T17:19:18.000Z" itemprop="datePublished">2019-08-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/25/Add-Navigation-Routing/">Chapter 4 - Add Navigation/Routing</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In the last chapter, we learned how to <a href="https://zhuotao25.github.io/2019/08/24/Add-New-Page/">add a new page</a> to our application. In this chapter, we will learn how to add navigation/routing.</p>
+<h2 id="1-Add-route-for-new-page"><a href="#1-Add-route-for-new-page" class="headerlink" title="1. Add route for new page"></a>1. Add route for new page</h2><p>Open file “my-app\src\app\app-routing.module.ts”, you should be able t see something like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routes: Routes = [</span><br><span class="line">  &#123; <span class="attr">path</span>: <span class="string">''</span>, <span class="attr">redirectTo</span>: <span class="string">'home'</span>, <span class="attr">pathMatch</span>: <span class="string">'full'</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">path</span>: <span class="string">'home'</span>, <span class="attr">loadChildren</span>: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./home/home.module'</span>).then( <span class="function"><span class="params">m</span> =&gt;</span> m.HomePageModule)&#125;,</span><br><span class="line">  &#123; <span class="attr">path</span>: <span class="string">'my-page'</span>, <span class="attr">loadChildren</span>: <span class="string">'./my-page/my-page.module#MyPagePageModule'</span> &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>Here is where you can add/remove/modify routes.</p>
+<p>This line should be auto-generated when you create a new page using <strong>ionic generate page “my-page”</strong>: </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">path</span>: <span class="string">'my-page'</span>, <span class="attr">loadChildren</span>: <span class="string">'./my-page/my-page.module#MyPagePageModule'</span> &#125;</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2019/08/25/Add-Navigation-Routing/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zhuotao25.github.io/2019/08/25/Add-Navigation-Routing/" data-id="cjzr9xgkz0000pcvdjworha7h" class="article-share-link">Share</a>
+      
+        <a href="https://zhuotao25.github.io/2019/08/25/Add-Navigation-Routing/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Add-New-Page" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/24/Add-New-Page/" class="article-date">
@@ -110,7 +161,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhuotao25.github.io/2019/08/24/Add-New-Page/" data-id="cjzq1ydie00010svd94jfop7z" class="article-share-link">Share</a>
+      <a data-url="https://zhuotao25.github.io/2019/08/24/Add-New-Page/" data-id="cjzr9xgl70001pcvd36uzg513" class="article-share-link">Share</a>
       
         <a href="https://zhuotao25.github.io/2019/08/24/Add-New-Page/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -159,7 +210,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/" data-id="cjzq1ydih00030svdal048fdq" class="article-share-link">Share</a>
+      <a data-url="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/" data-id="cjzr9xgli0005pcvdu4v30xim" class="article-share-link">Share</a>
       
         <a href="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -205,7 +256,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhuotao25.github.io/2019/08/15/Install-Ionic/" data-id="cjzq1ydij00040svdbqqzvc5c" class="article-share-link">Share</a>
+      <a data-url="https://zhuotao25.github.io/2019/08/15/Install-Ionic/" data-id="cjzr9xglf0003pcvdsdrwmik2" class="article-share-link">Share</a>
       
         <a href="https://zhuotao25.github.io/2019/08/15/Install-Ionic/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -245,8 +296,8 @@ ga('send', 'pageview');
 <h2 id="Table-Of-Contents"><a href="#Table-Of-Contents" class="headerlink" title="Table Of Contents"></a>Table Of Contents</h2><ul>
 <li><a href="https://zhuotao25.github.io/2019/08/15/Install-Ionic/">Chapter 1: Install Ionic</a></li>
 <li><a href="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/">Chapter 2: Create Ionic Application</a></li>
-<li><a href>Chapter 3: Add New Pages</a></li>
-<li><a href>Chapter 4: Navigation</a></li>
+<li><a href="https://zhuotao25.github.io/2019/08/24/Add-New-Page/">Chapter 3: Add New Pages</a></li>
+<li><a href>Chapter 4: Navigation/Routing</a></li>
 </ul>
         
           <p class="article-more-link">
@@ -256,7 +307,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhuotao25.github.io/2019/08/14/Ionic-Framework-Tutorial/" data-id="cjzq1ydi800000svdfe49tjd2" class="article-share-link">Share</a>
+      <a data-url="https://zhuotao25.github.io/2019/08/14/Ionic-Framework-Tutorial/" data-id="cjzr9xglh0004pcvdjwq9ytjo" class="article-share-link">Share</a>
       
         <a href="https://zhuotao25.github.io/2019/08/14/Ionic-Framework-Tutorial/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -297,7 +348,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhuotao25.github.io/2019/08/10/Welcome/" data-id="cjzq1ydil00050svdyuksp94l" class="article-share-link">Share</a>
+      <a data-url="https://zhuotao25.github.io/2019/08/10/Welcome/" data-id="cjzr9xgma000dpcvdurc3if89" class="article-share-link">Share</a>
       
         <a href="https://zhuotao25.github.io/2019/08/10/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -354,6 +405,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2019/08/25/Add-Navigation-Routing/">Chapter 4 - Add Navigation/Routing</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/24/Add-New-Page/">Chapter 3 - Add New Page</a>
           </li>
         
@@ -367,10 +422,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2019/08/14/Ionic-Framework-Tutorial/">Ionic Framework Tutorial</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/10/Welcome/">Welcome</a>
           </li>
         
       </ul>

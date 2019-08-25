@@ -18,20 +18,20 @@ ga('send', 'pageview');
 
 
   
-  <title>Ionic Framework Tutorial | Welcome</title>
+  <title>Chapter 4 - Add Navigation/Routing | Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="What you will learn?You will learn how to build a simple ionic APP from scratch. Table Of Contents Chapter 1: Install Ionic Chapter 2: Create Ionic Application Chapter 3: Add New Pages Chapter 4: Navi">
+  <meta name="description" content="In the last chapter, we learned how to add a new page to our application. In this chapter, we will learn how to add navigation/routing. 1. Add route for new pageOpen file “my-app\src\app\app-routing.m">
 <meta name="keywords" content="Ionic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ionic Framework Tutorial">
-<meta property="og:url" content="https://zhuotao25.github.io/2019/08/14/Ionic-Framework-Tutorial/index.html">
+<meta property="og:title" content="Chapter 4 - Add Navigation&#x2F;Routing">
+<meta property="og:url" content="https://zhuotao25.github.io/2019/08/25/Add-Navigation-Routing/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="What you will learn?You will learn how to build a simple ionic APP from scratch. Table Of Contents Chapter 1: Install Ionic Chapter 2: Create Ionic Application Chapter 3: Add New Pages Chapter 4: Navi">
+<meta property="og:description" content="In the last chapter, we learned how to add a new page to our application. In this chapter, we will learn how to add navigation/routing. 1. Add route for new pageOpen file “my-app\src\app\app-routing.m">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-25T17:50:21.786Z">
+<meta property="og:updated_time" content="2019-08-25T17:48:59.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ionic Framework Tutorial">
-<meta name="twitter:description" content="What you will learn?You will learn how to build a simple ionic APP from scratch. Table Of Contents Chapter 1: Install Ionic Chapter 2: Create Ionic Application Chapter 3: Add New Pages Chapter 4: Navi">
+<meta name="twitter:title" content="Chapter 4 - Add Navigation&#x2F;Routing">
+<meta name="twitter:description" content="In the last chapter, we learned how to add a new page to our application. In this chapter, we will learn how to add navigation/routing. 1. Add route for new pageOpen file “my-app\src\app\app-routing.m">
   
     <link rel="alternate" href="/atom.xml" title="Welcome" type="application/atom+xml">
   
@@ -78,10 +78,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Ionic-Framework-Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Add-Navigation-Routing" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/08/14/Ionic-Framework-Tutorial/" class="article-date">
-  <time datetime="2019-08-14T23:21:21.000Z" itemprop="datePublished">2019-08-14</time>
+    <a href="/2019/08/25/Add-Navigation-Routing/" class="article-date">
+  <time datetime="2019-08-25T17:19:18.000Z" itemprop="datePublished">2019-08-25</time>
 </a>
     
   </div>
@@ -92,7 +92,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Ionic Framework Tutorial
+      Chapter 4 - Add Navigation/Routing
     </h1>
   
 
@@ -100,21 +100,28 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="What-you-will-learn"><a href="#What-you-will-learn" class="headerlink" title="What you will learn?"></a>What you will learn?</h2><p>You will learn how to build a simple ionic APP from scratch.</p>
-<h2 id="Table-Of-Contents"><a href="#Table-Of-Contents" class="headerlink" title="Table Of Contents"></a>Table Of Contents</h2><ul>
-<li><a href="https://zhuotao25.github.io/2019/08/15/Install-Ionic/">Chapter 1: Install Ionic</a></li>
-<li><a href="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/">Chapter 2: Create Ionic Application</a></li>
-<li><a href="https://zhuotao25.github.io/2019/08/24/Add-New-Page/">Chapter 3: Add New Pages</a></li>
-<li><a href>Chapter 4: Navigation/Routing</a></li>
-</ul>
+        <p>In the last chapter, we learned how to <a href="https://zhuotao25.github.io/2019/08/24/Add-New-Page/">add a new page</a> to our application. In this chapter, we will learn how to add navigation/routing.</p>
+<h2 id="1-Add-route-for-new-page"><a href="#1-Add-route-for-new-page" class="headerlink" title="1. Add route for new page"></a>1. Add route for new page</h2><p>Open file “my-app\src\app\app-routing.module.ts”, you should be able t see something like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routes: Routes = [</span><br><span class="line">  &#123; <span class="attr">path</span>: <span class="string">''</span>, <span class="attr">redirectTo</span>: <span class="string">'home'</span>, <span class="attr">pathMatch</span>: <span class="string">'full'</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">path</span>: <span class="string">'home'</span>, <span class="attr">loadChildren</span>: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./home/home.module'</span>).then( <span class="function"><span class="params">m</span> =&gt;</span> m.HomePageModule)&#125;,</span><br><span class="line">  &#123; <span class="attr">path</span>: <span class="string">'my-page'</span>, <span class="attr">loadChildren</span>: <span class="string">'./my-page/my-page.module#MyPagePageModule'</span> &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>Here is where you can add/remove/modify routes.</p>
+<p>This line should be auto-generated when you create a new page using <strong>ionic generate page “my-page”</strong>: </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">path</span>: <span class="string">'my-page'</span>, <span class="attr">loadChildren</span>: <span class="string">'./my-page/my-page.module#MyPagePageModule'</span> &#125;</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a>
+
+<h2 id="2-Add-a-button-for-navigation"><a href="#2-Add-a-button-for-navigation" class="headerlink" title="2. Add a button for navigation"></a>2. Add a button for navigation</h2><p>Open file “pokemon-db\src\app\home\home.page.html” and add a button fot navigation:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;ion-button [routerLink]=<span class="string">"['/my-page']"</span>&gt;Navigate&lt;<span class="regexp">/ion-button&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We use attribute <strong>[routerLink]</strong> to specify the route.</p>
+<p>Star the app and now you should be able to navigate to the new page with the button on home page. </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhuotao25.github.io/2019/08/14/Ionic-Framework-Tutorial/" data-id="cjzr9xglh0004pcvdjwq9ytjo" class="article-share-link">Share</a>
+      <a data-url="https://zhuotao25.github.io/2019/08/25/Add-Navigation-Routing/" data-id="cjzr9xgkz0000pcvdjworha7h" class="article-share-link">Share</a>
       
-        <a href="https://zhuotao25.github.io/2019/08/14/Ionic-Framework-Tutorial/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://zhuotao25.github.io/2019/08/25/Add-Navigation-Routing/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li></ul>
@@ -125,19 +132,10 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2019/08/15/Install-Ionic/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Chapter 1 - Install Ionic
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/10/Welcome/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/08/24/Add-New-Page/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Welcome</div>
+      <div class="article-nav-title">Chapter 3 - Add New Page</div>
     </a>
   
 </nav>
@@ -241,7 +239,7 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'onebyteone';
   
-  var disqus_url = 'https://zhuotao25.github.io/2019/08/14/Ionic-Framework-Tutorial/';
+  var disqus_url = 'https://zhuotao25.github.io/2019/08/25/Add-Navigation-Routing/';
   
   (function(){
     var dsq = document.createElement('script');
