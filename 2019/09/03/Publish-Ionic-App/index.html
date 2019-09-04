@@ -18,20 +18,20 @@ ga('send', 'pageview');
 
 
   
-  <title>Chapter 2 - Create Ionic Application | Welcome</title>
+  <title>Chapter 5 - Publish Your Ionic App | Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="In the last chapter, we learned how to install Ionic. In this chapter, we will learn how to create a new Ionic application. 1. Create new Ionic projectOpen command prompt/terminal at the directory whe">
+  <meta name="description" content="In the last chapter, we learned how to add navigation/routing to our application. In this chapter, we will learn how to publish our Ionic App as web App, Android App and IOS App. 1. Publish Progressiv">
 <meta name="keywords" content="Ionic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Chapter 2 - Create Ionic Application">
-<meta property="og:url" content="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/index.html">
+<meta property="og:title" content="Chapter 5 - Publish Your Ionic App">
+<meta property="og:url" content="https://zhuotao25.github.io/2019/09/03/Publish-Ionic-App/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="In the last chapter, we learned how to install Ionic. In this chapter, we will learn how to create a new Ionic application. 1. Create new Ionic projectOpen command prompt/terminal at the directory whe">
+<meta property="og:description" content="In the last chapter, we learned how to add navigation/routing to our application. In this chapter, we will learn how to publish our Ionic App as web App, Android App and IOS App. 1. Publish Progressiv">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-25T17:51:43.027Z">
+<meta property="og:updated_time" content="2019-09-04T04:16:59.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 2 - Create Ionic Application">
-<meta name="twitter:description" content="In the last chapter, we learned how to install Ionic. In this chapter, we will learn how to create a new Ionic application. 1. Create new Ionic projectOpen command prompt/terminal at the directory whe">
+<meta name="twitter:title" content="Chapter 5 - Publish Your Ionic App">
+<meta name="twitter:description" content="In the last chapter, we learned how to add navigation/routing to our application. In this chapter, we will learn how to publish our Ionic App as web App, Android App and IOS App. 1. Publish Progressiv">
   
     <link rel="alternate" href="/atom.xml" title="Welcome" type="application/atom+xml">
   
@@ -80,10 +80,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Create-Ionic-Application" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Publish-Ionic-App" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/08/16/Create-Ionic-Application/" class="article-date">
-  <time datetime="2019-08-16T23:38:04.000Z" itemprop="datePublished">2019-08-16</time>
+    <a href="/2019/09/03/Publish-Ionic-App/" class="article-date">
+  <time datetime="2019-09-04T03:40:27.000Z" itemprop="datePublished">2019-09-03</time>
 </a>
     
   </div>
@@ -94,7 +94,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Chapter 2 - Create Ionic Application
+      Chapter 5 - Publish Your Ionic App
     </h1>
   
 
@@ -102,29 +102,56 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>In the last chapter, we learned how to <a href="https://zhuotao25.github.io/2019/08/15/Install-Ionic/">install Ionic</a>. In this chapter, we will learn how to create a new Ionic application.</p>
-<h2 id="1-Create-new-Ionic-project"><a href="#1-Create-new-Ionic-project" class="headerlink" title="1. Create new Ionic project"></a>1. Create new Ionic project</h2><p>Open command prompt/terminal at the directory where you want to create the app, then run:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ionic start &quot;my-app&quot; blank</span><br></pre></td></tr></table></figure>
+        <p>In the last chapter, we learned how to <a href="https://zhuotao25.github.io/2019/08/25/Add-Navigation-Routing/">add navigation/routing</a> to our application. In this chapter, we will learn how to publish our Ionic App as web App, Android App and IOS App.</p>
+<h2 id="1-Publish-Progressive-Web-App"><a href="#1-Publish-Progressive-Web-App" class="headerlink" title="1. Publish Progressive Web App"></a>1. Publish Progressive Web App</h2><h3 id="a-Set-up-PWA"><a href="#a-Set-up-PWA" class="headerlink" title="a. Set up PWA"></a>a. Set up PWA</h3><p>To deploy as a Web App, the first thing to do is to set up our project as Progressive Web App (PWA). To do that, in project directory, run:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ng add @angular/pwa</span><br></pre></td></tr></table></figure>
 
-<p>It is going to create a folder called “my-app” with essential files and then install all the essential packages. This process will take several minutes. </p>
 <a id="more"></a>
+<p>Note: If command doesn’t work, try:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm link @angular/cli</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-Run-the-app-in-browser"><a href="#2-Run-the-app-in-browser" class="headerlink" title="2. Run the app in browser"></a>2. Run the app in browser</h2><p>After everything is done, cd into the folder:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd my-app</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g @angular/cli</span><br></pre></td></tr></table></figure>
 
-<p>Then run the app:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ionic serve</span><br></pre></td></tr></table></figure>
+<h3 id="b-Deploy-App"><a href="#b-Deploy-App" class="headerlink" title="b. Deploy App"></a>b. Deploy App</h3><p>We will use <a href="https://console.firebase.google.com" target="_blank" rel="noopener">Firebase</a> to deploy. First, you will need to <a href="https://console.firebase.google.com" target="_blank" rel="noopener">create a project</a> in Firebase.</p>
+<p>Then, install Firebase:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
 
-<p>It will start up the app in your browser. This process will also takes several minutes. Now you have your first app running!</p>
-<hr>
-<h2 id="Next-Chapter"><a href="#Next-Chapter" class="headerlink" title="Next Chapter"></a>Next Chapter</h2><p>In the next chapter, we will learn how to <a href="https://zhuotao25.github.io/2019/08/24/Add-New-Page/">add a new page</a> to our app.</p>
+<p>After installation, log in using:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ firebase login</span><br></pre></td></tr></table></figure>
+
+<p>Then initial firebase in project directory:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ firebase init</span><br></pre></td></tr></table></figure>
+
+<p>Then it will ask you some questions:</p>
+<ul>
+<li><p>“Which Firebase CLI features do you want to set up for this folder?”<br>Select “Hosting: Configure and deploy Firebase Hosting sites.”</p>
+</li>
+<li><p>“Select a default Firebase project for this directory:” Select the project name you just created in Firebase.</p>
+</li>
+<li><p>“What do you want to use as your public directory?” Enter “www”.</p>
+</li>
+<li><p>Configure as a single-page app (rewrite all urls to /index.html)?” Enter “Y”.</p>
+</li>
+<li><p>“File www/index.html already exists. Overwrite?” Enter “N”.</p>
+</li>
+</ul>
+<p>Next, build the App using:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ionic build --prod</span><br></pre></td></tr></table></figure>
+
+<p>Finally, we can deploy the App using:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>After it is done, you should be able to access the App using the url for the firebase project. </p>
+<h2 id="2-Publish-Android-App"><a href="#2-Publish-Android-App" class="headerlink" title="2. Publish Android App"></a>2. Publish Android App</h2><p>Coming soon</p>
+<h2 id="3-Publish-IOS-App"><a href="#3-Publish-IOS-App" class="headerlink" title="3. Publish IOS App"></a>3. Publish IOS App</h2><p>Coming soon</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/" data-id="ck04r478t000358vdh1iq9btl" class="article-share-link">Share</a>
+      <a data-url="https://zhuotao25.github.io/2019/09/03/Publish-Ionic-App/" data-id="ck04r478z000858vdi4rrr65o" class="article-share-link">Share</a>
       
-        <a href="https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://zhuotao25.github.io/2019/09/03/Publish-Ionic-App/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li></ul>
@@ -135,19 +162,10 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2019/08/24/Add-New-Page/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Chapter 3 - Add New Page
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/15/Install-Ionic/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/08/25/Add-Navigation-Routing/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Chapter 1 - Install Ionic</div>
+      <div class="article-nav-title">Chapter 4 - Add Navigation/Routing</div>
     </a>
   
 </nav>
@@ -253,7 +271,7 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'onebyteone';
   
-  var disqus_url = 'https://zhuotao25.github.io/2019/08/16/Create-Ionic-Application/';
+  var disqus_url = 'https://zhuotao25.github.io/2019/09/03/Publish-Ionic-App/';
   
   (function(){
     var dsq = document.createElement('script');
